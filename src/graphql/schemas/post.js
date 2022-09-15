@@ -1,19 +1,19 @@
-const { gql } = require("apollo-server-core");
+const { gql } = require("apollo-server-express");
 
 module.exports = gql`
     type Post{
         id:Int!
         title:String!
-        content:Srring!
+        content:String!
         author:User!
         comments:[Comment!]
         createdAt:String
     }
-    extend type Query{
+    type Query{
         getAllPosts:[Post!]
-        getsinglePost(pastId:Int!):Post
+        getSinglePost(pastId:Int!):Post
     }
-    extend type Mutation{
+    type Mutation{
         createPost(title:String!,content:String!):CreatePostResponse
     }
     type CreatePostResponse{

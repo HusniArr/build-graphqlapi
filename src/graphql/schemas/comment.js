@@ -1,4 +1,4 @@
-const { gql } = require("apollo-server-core");
+const { gql } = require("apollo-server-express");
 
 module.exports = gql`
     type Comment {
@@ -8,7 +8,7 @@ module.exports = gql`
         post:String!
         createdAt:String
     }
-    extend type Mutation{
+    type Mutation{
         createComment(content:String!,postId:Int!):CreateCommentResponse
     }
     type CreateCommentResponse{

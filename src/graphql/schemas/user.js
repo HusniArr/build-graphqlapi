@@ -1,4 +1,4 @@
-const { gql } = require("apollo-server-core");
+const { gql } = require("apollo-server-express");
 
 module.exports = gql`
     type User {
@@ -9,7 +9,7 @@ module.exports = gql`
         posts:[Post!]
     }
 
-    extend type Mutation{
+    type Mutation{
         register(input:RegisterInput!):RegisterResponse
         login(input:LoginInput!):LoginResponse
     }

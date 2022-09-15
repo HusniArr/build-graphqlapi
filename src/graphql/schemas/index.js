@@ -1,11 +1,10 @@
-const { gql } = require("apollo-server-core");
+const { gql } = require("apollo-server-express");
 const userType = require("./user");
 const commentType = require("./comment");
 const postType = require("./post");
 // 3
-const typeDefs = gql`
+const rootType = gql`
 type Query {
-  hello:String
   root: String
 }
 
@@ -14,4 +13,4 @@ type Mutation{
 }
 `;
 
-module.exports = [typeDefs,userType,commentType,postType];
+module.exports = [rootType,userType,commentType,postType];

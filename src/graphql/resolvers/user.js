@@ -5,7 +5,7 @@ const { User } = require("../../database/models");
 
 module.exports = {
     Mutation:{
-        async Register(root,args,context){
+        async register(root,args,context){
             const { name, email, password } = args.input;
             return User.create({name,email,password});
         },

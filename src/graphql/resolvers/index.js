@@ -9,4 +9,4 @@ const userResolvers = require('./user');
 const postResolvers = require('./post');
 const commentResolvers = require('./comment');
 
-module.exports = [resolvers,userResolvers,postResolvers,commentResolvers];
+module.exports = [userResolvers,postResolvers,commentResolvers];
