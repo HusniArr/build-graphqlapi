@@ -21,15 +21,14 @@ module.exports = gql`
     }
 
     input RegisterInput{
-        id: Int!
         name:String!
         email:String!
+        password:String!
     }
 
     input LoginInput{
-        id: Int!
-        name:String!
         email:String!
+        password:String!
     }
 
     type LoginResponse{

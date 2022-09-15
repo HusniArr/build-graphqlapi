@@ -7,6 +7,7 @@ module.exports = {
     Mutation:{
         async register(root,args,context){
             const { name, email, password } = args.input;
+            // const hashPass = bcrypt.hashSync(10,password);
             return User.create({name,email,password});
         },
         async login(roote,{input},context){
